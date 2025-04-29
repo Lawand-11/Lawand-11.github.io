@@ -7,6 +7,7 @@
   <title>Projects | Lawand Piromari</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <style>
     body {
@@ -51,22 +52,39 @@
 
   <div class="content">
     <!-- Navigation Bar -->
-  <header class="bg-gray-800 shadow fixed w-full z-10 top-0">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
+    <header class="bg-gray-800 shadow fixed w-full z-10 top-0">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <div class="flex items-center">
           <span class="font-bold text-xl">Lawand Piromari</span>
         </div>
+    
+        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8 items-center">
-          <a href="index.html" class="hover:text-cyan-400">Home</a>
-          <a href="about.html" class="hover:text-cyan-400">About</a>
-          <a href="projects.html" class="hover:text-cyan-400">Projects</a>
-          <a href="resume.html" class="hover:text-cyan-400">Resume</a>
-          <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+          <a href="index.html" class="hover:text-cyan-400 transition-colors duration-300">Home</a>
+          <a href="about.html" class="hover:text-cyan-400 transition-colors duration-300">About</a>
+          <a href="projects.html" class="hover:text-cyan-400 transition-colors duration-300">Projects</a>
+          <a href="resume.html" class="hover:text-cyan-400 transition-colors duration-300">Resume</a>
+          <a href="contact.html" class="hover:text-cyan-400 transition-colors duration-300">Contact</a>
+        </div>
+        
+    
+        <!-- Mobile Hamburger Menu -->
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="text-white focus:outline-none">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
         </div>
       </div>
+    
+      <!-- Mobile Menu Links -->
+    <div id="mobile-menu" class="hidden flex flex-col bg-gray-800 px-6 py-4 space-y-4 text-center transition-all duration-300 ease-in-out transform scale-y-0 origin-top">
+      <a href="index.html" class="hover:text-cyan-400">Home</a>
+      <a href="about.html" class="hover:text-cyan-400">About</a>
+      <a href="projects.html" class="hover:text-cyan-400">Projects</a>
+      <a href="resume.html" class="hover:text-cyan-400">Resume</a>
+      <a href="contact.html" class="hover:text-cyan-400">Contact</a>
     </div>
-  </header>
+    </header>
 
   <!-- Projects Section -->
   <section class="pt-28 px-6 max-w-6xl mx-auto">
@@ -174,6 +192,32 @@
   <script>
     AOS.init();
   </script>
+
+<script>
+  const menuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  let menuOpen = false;
+
+  menuButton.addEventListener('click', () => {
+    menuOpen = !menuOpen;
+    
+    if (menuOpen) {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => {
+        mobileMenu.classList.remove('scale-y-0');
+        mobileMenu.classList.add('scale-y-100');
+      }, 10);
+      menuButton.innerHTML = '<i class="fas fa-times text-2xl"></i>';
+    } else {
+      mobileMenu.classList.remove('scale-y-100');
+      mobileMenu.classList.add('scale-y-0');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300); // Wait for animation
+      menuButton.innerHTML = '<i class="fas fa-bars text-2xl"></i>';
+    }
+  });
+</script>
 </body>
 
 </html>

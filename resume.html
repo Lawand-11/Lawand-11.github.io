@@ -88,17 +88,39 @@
   <section class="pt-28 px-6 text-center">
     <h1 class="text-4xl font-bold mb-6">My Resume</h1>
     <div class="flex justify-center">
-      <iframe src="Lawand_Piromari_Portfolio_Resume.pdf" class="w-full max-w-4xl h-[80vh] border-4 border-cyan-400 rounded-lg shadow-lg" height="900px" frameborder="0"></iframe>
+      <!-- Desktop: Embedded PDF -->
+      <div id="desktop-resume" class="hidden w-full max-w-4xl">
+        <iframe src="Lawand_Piromari_Portfolio_Resume.pdf" class="w-full h-[80vh] border-4 border-cyan-400 rounded-lg shadow-lg" frameborder="0" height="900px"></iframe>
+          <div class="mt-8 flex justify-center mb-20">
+            <a href="Lawand_Piromari_Portfolio_Resume.pdf" download 
+            class="bg-purple-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg glow-btn text-xl hover:bg-cyan-400 hover:shadow-cyan-400/70 transition">
+              Download Resume
+            </a>
+          </div>
+      </div>
+    
+      <!-- Mobile: Screenshot image -->
+      <div id="mobile-resume" class="hidden flex flex-col items-center">
+        <img src="Lawand_Piromari_Portfolio_Resume.jpg" alt="Resume Screenshot" class="rounded-lg shadow-lg max-w-full">
+        <a href="Lawand_Piromari_Portfolio_Resume.pdf" target="_blank"
+          class="mt-4 bg-cyan-400 text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-cyan-300 transition">
+          View Full PDF
+        </a>
+      </div>
     </div>
-    <div class="mt-8 flex justify-center mb-20">
-  <a href="Lawand_Piromari_Portfolio_Resume.pdf" download 
-    class="bg-purple-900 text-white font-bold py-3 px-8 rounded-lg shadow-lg glow-btn text-xl hover:bg-cyan-400 hover:shadow-cyan-400/70 transition">
-    Download Resume
-  </a>
-</div>
-
   </section>
   </div>
+
+  <script>
+  // Device detection for mobile
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+  if (isMobile) {
+    document.getElementById('mobile-resume').classList.remove('hidden');
+  } else {
+    document.getElementById('desktop-resume').classList.remove('hidden');
+  }
+</script>
 
   <script>
     // Simple fade-in animation on scroll

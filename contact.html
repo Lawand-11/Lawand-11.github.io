@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lawand Piromari | Android Developer</title>
+  <title>Contact | Lawand Piromari</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
@@ -35,23 +35,14 @@
       z-index: 10;
     }
 
-    .glow-icon:hover {
+    .social-icon {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .social-icon:hover {
       color: #22d3ee;
       text-shadow: 0 0 8px #22d3ee;
       transform: scale(1.1);
       transition: all 0.3s ease-in-out;
-    }
-    .download-btn:hover {
-      color: #22d3ee;
-      text-decoration: underline;
-      transition: all 0.3s ease-in-out;
-    }
-    .profile-pic {
-      transition: all 0.3s ease-in-out;
-    }
-    .profile-pic:hover {
-      box-shadow: 0 0 20px #22d3ee;
-      transform: scale(1.05);
     }
   </style>
 </head>
@@ -79,29 +70,37 @@
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="pt-28 px-6 text-center">
-      <div class="flex justify-center mt-8">
-        <img src="profile.jpg" alt="Profile" class="w-48 h-48 rounded-full object-cover shadow-lg">
+    <!-- Contact Section -->
+    <section class="pt-28 px-6 max-w-4xl mx-auto text-center">
+      <h1 class="text-5xl font-bold mb-8 text-cyan-400">Contact Me</h1>
+      <div class="bg-gray-800 bg-opacity-70 rounded-xl p-10 shadow-lg backdrop-blur-md">
+        <p class="text-lg leading-7 text-gray-300 mb-12">
+        I'd love to hear from you! Feel free to reach out via email, LinkedIn, or check out my GitHub profile.
+      </p>
+      <div class="flex justify-center space-x-16 mb-10">
+        <div class="flex flex-col items-center space-y-2">
+          <a href="https://github.com/Lawand-11" target="_blank" class="text-white social-icon text-4xl">
+            <i class="fab fa-github"></i>
+          </a>
+          <span class="text-gray-300 text-sm">GitHub</span>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+          <a href="https://www.linkedin.com/in/lawand/" target="_blank" class="text-white social-icon text-4xl">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <span class="text-gray-300 text-sm">LinkedIn</span>
+        </div>
+        <div class="flex flex-col items-center space-y-2">
+          <a href="mailto:piromarilawand@gmail.com" class="text-white social-icon text-4xl">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <span class="text-gray-300 text-sm">Email</span>
+        </div>
       </div>
-      <h1 class="text-4xl font-bold">Hi, I'm Lawand 👋</h1>
-      <p class="text-xl mt-2">Android Developer | Kotlin | Jetpack Compose | Firebase</p>
-      <div class="mt-8 max-w-2xl mx-auto text-lg bg-gray-800 p-6 rounded-lg shadow-md">
-        <p>
-          I'm a results-driven Android developer with 3+ years of experience building and deploying scalable mobile apps using Kotlin, Jetpack Compose, Coroutines, Hilt, and Room. I enjoy designing clean, user-focused solutions and have shipped real-world applications to the Google Play Store, including one for a local nonprofit. Beyond mobile, I’ve developed a machine learning-powered stock prediction dashboard using Streamlit and Python. Whether working independently or on cross-functional teams, I’m passionate about building impactful software.
-        </p>
       </div>
-      <div class="mt-4 flex justify-center space-x-6 mb-20">
-        <a href="https://github.com/Lawand-11" target="_blank" class="text-white glow-icon text-3xl">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/lawand/" target="_blank" class="text-white glow-icon text-3xl">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:piromarilawand@gmail.com" class="text-white glow-icon text-3xl">
-          <i class="fas fa-envelope"></i>
-        </a>
-      </div>
+      <p class="text-gray-400 text-sm mt-12">
+        Thank you for visiting! 🚀
+      </p>
     </section>
   </div>
 
@@ -134,12 +133,8 @@
       interactivity: {
         detect_on: "canvas",
         events: {
-          onhover: {
-            enable: false,
-          },
-          onclick: {
-            enable: false,
-          }
+          onhover: { enable: false },
+          onclick: { enable: false }
         },
       },
       retina_detect: true

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Lawand Piromari</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <style>
+    body {
+      background: linear-gradient(270deg, #0f172a, #0e7490, #8b5cf6);
+      background-size: 600% 600%;
+      animation: gradientAnimation 15s ease infinite;
+    }
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: none;
+    }
+    .glow-on-hover {
+      transition: all 0.3s ease-in-out;
+    }
+    .glow-on-hover:hover {
+      box-shadow: 0 0 20px #22d3ee;
+      transform: scale(1.05);
+   }
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white">
+   <!-- Particles Background -->
+   <div id="particles-js"></div>
+   
+   <div class="content">
+<!-- Navigation Bar -->
+  <header class="bg-gray-800 shadow fixed w-full z-10 top-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center">
+          <span class="font-bold text-xl">Lawand Piromari</span>
+        </div>
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="index.html" class="hover:text-cyan-400">Home</a>
+          <a href="about.html" class="hover:text-cyan-400">About</a>
+          <a href="projects.html" class="hover:text-cyan-400">Projects</a>
+          <a href="resume.html" class="hover:text-cyan-400">Resume</a>
+          <a href="contact.html" class="hover:text-cyan-400">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section class="pt-28 px-6 max-w-7xl mx-auto">
+    <h1 class="text-4xl font-bold mb-12 text-center">About Me</h1>
+
+    <!-- Main Bio Section -->
+    <div class="flex flex-col md:flex-row items-center bg-gray-800 rounded-lg shadow-lg p-8 mb-16 fade-in">
+      <div class="md:w-1/2 flex justify-center mb-8 md:mb-0 space-x-6">
+        <img src="Lawand_Kurdish_Clothing.jpg" alt="Lawand in Traditional Kurdish Clothing" class="rounded-lg shadow-lg w-72 h-auto object-cover glow-on-hover fade-in">
+        <img src="Lawand_google_campus.jpg" alt="Lawand at Google campus" class="rounded-lg shadow-lg w-72 h-auto object-cover glow-on-hover fade-in">
+      </div>
+      <div class="md:w-1/2 md:pl-12">
+        <p class="text-lg leading-8 text-gray-300 mb-8">
+          Hi, I'm Lawand Piromari — a passionate Software Engineer with a deep love for creating intuitive, impactful mobile experiences.
+        </p>
+    
+        <p class="text-lg leading-8 text-gray-300 mb-8">
+          I first discovered my love for technology at a young age, captivated by how software could solve real-world problems. Today, I specialize in Android development, working with technologies like Kotlin, Jetpack Compose, Room, and Hilt to build thoughtful, scalable apps. My technical journey includes creating a published nonprofit app, an AI-powered stock prediction tool, and a dynamic Nuzlocke tracking application — all designed and built from the ground up.
+        <p class="text-lg leading-8 text-gray-300 mb-8">
+          Beyond coding, I'm someone who values perseverance, creativity, and lifelong learning. After overcoming a major back injury during university, I developed an even stronger commitment to resilience and personal growth. Outside of tech, you’ll often find me enjoying fitness, exploring nature, or diving into the latest innovations in AI and mobile software.
+        <p class="text-lg leading-8 text-gray-300 mb-8">
+          I'm excited to continue building tools that make people's lives easier — and to work alongside teams that value innovation, collaboration, and impact.
+          
+      </div>
+    </div>
+
+    <!-- Fun Facts Section -->
+    <div class="flex flex-col md:flex-row items-center bg-gray-800 rounded-lg shadow-lg p-8 fade-in mb-20">
+      <div class="md:w-1/2 md:pr-12 order-2 md:order-1">
+        <h2 class="text-2xl font-bold Center mb-4">Fun Facts</h2>
+        <ul class="text-left space-y-3 text-gray-300">
+          <li>🏋️‍♂️ Fitness enthusiast and lifelong strength training advocate</li>
+          <li>🌲 Passionate about exploring nature and hiking</li>
+          <li>📚 Constant learner — tech, business, and psychology books</li>
+          <li>🎮 Gamer at heart — love games that combine creativity and strategy</li>
+          <li>🤖 Excited about the future of AI and mobile technology</li>
+        </ul>
+      </div>
+      <div class="md:w-1/2 flex justify-center order-1 md:order-2 mb-8 md:mb-0 space-x-6">
+        <img src="Lawand_Mist_Trail.jpg" alt="Hiking Adventure" class="rounded-lg shadow-lg w-72 h-auto object-cover glow-on-hover fade-in">
+        <img src="Lawand_Basketball.jpg" alt="Hoop Sesh" class="rounded-lg shadow-lg w-72 h-auto object-cover glow-on-hover fade-in">
+      </div>
+    </div>
+  </section>
+   </div>
+  
+  <script>
+    // Simple fade-in animation on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    });
+    document.querySelectorAll('.fade-in').forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+
+  <!-- Particles Config -->
+  <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 50 },
+        size: { value: 3 },
+        move: {
+          enable: true,
+          speed: 1,
+          direction: "none",
+          random: true,
+          straight: false,
+          out_mode: "out",
+        },
+        opacity: {
+          value: 0.3,
+          random: true
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#22d3ee",
+          opacity: 0.2,
+          width: 1
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: {
+            enable: false,
+          },
+          onclick: {
+            enable: false,
+          }
+        },
+      },
+      retina_detect: true
+    });
+  </script>
+</body>
+
+</html>
